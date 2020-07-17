@@ -1,0 +1,30 @@
+.modal-cont {
+    position: absolute;
+    width: 50%;
+    top: 45%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background-color: white;
+    height: 22%;
+    z-index: 1;
+    border: solid black 1px;
+}
+
+.modal-cancel {
+    float: right;
+    margin-right: 12px;
+    margin-top: 12px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.button-container {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}

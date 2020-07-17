@@ -1,0 +1,45 @@
+#info_panel_cont {
+    display: flex;
+    position: relative;
+    width: 40%;
+    z-index: 1;
+}
+.info_panel_content {
+    transition: 1s;
+    background-color: white;
+    height: 100vh;
+}
+
+.info_panel_content.show {
+    width: 75%;
+    max-width: 75%;
+}
+
+.info_panel_content.hide {
+    overflow: hidden;
+    max-width: 0;
+}
+
+.info_panel_toggle {
+    /* position: absolute; */
+    /* top: 2%;
+    right: 5%; */
+    height: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    background: none;
+}
+
+.info_panel_toggle.open {
+    /* transform: translateX(180px); */
+    width: 10%;
+}
+
+.info_panel_toggle.close {
+    /* transform: translateX(180px) */
+}
+
+h1 {
+    margin: 0;
+}
