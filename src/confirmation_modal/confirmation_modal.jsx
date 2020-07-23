@@ -1,0 +1,199 @@
+import React, { Component } from "react";
+import "./confirmation_modal.css";
+
+export default class confirmation_modal extends Component {
+  render() {
+    return (
+      <div className="modal-text">
+        <p className="paragraph-text">
+          You have requested access to the Member Service Area Mapping (MSAM)
+          Application from KorTerra, Inc. In order to use the MSAM Application,
+          you, must read the following and agree to be bound by the following
+          terms of use. THIS LICENSE AGREEMENT is a legal agreement between you,
+          and the company for which you work (collectively, the "End-User") and
+          KorTerra, Inc., a Minnesota corporation ("KorTerra"). As used in this
+          Agreement, "Software" means, collectively, the MSAM Application
+          software and systems, together with any and all enhancements, upgrades
+          and updates thereto that may be provided to End-User in the future by
+          KorTerra. PLEASE READ THIS AGREEMENT CAREFULLY BEFORE USING THE
+          SOFTWARE THAT YOU HAVE LOGGED INTO. BY USING THE SOFTWARE YOU ARE
+          ACCEPTING THE TERMS OF THIS AGREEMENT AND USE OF THE SOFTWARE
+          INDICATES YOUR ACCEPTANCE OF THIS AGREEMENT AND ITS TERMS BY THE
+          COMPANY FOR WHICH YOU WORK. IF YOU, OR YOUR COMPANY, DO NOT AGREE TO
+          THESE TERMS AND CONDITIONS, YOU SHOULD REFRAIN FROM USING THE
+          SOFTWARE. BY ACCEPTING THIS AGREEMENT, YOU, CERTIFY THAT YOU HAVE THE
+          AUTHORITY TO BIND YOURSELF AND YOUR COMPANY TO THIS AGREEMENT. 1. MSAM
+          Application Ownership. By this Agreement, KorTerra is licensing its
+          web-based software application, known as "Member Service Area Mapping
+          (MSAM) Application" on a limited license for use only on a web server
+          hosted and controlled by KorTerra. KorTerra is at all times the owner
+          of the Software and retains all ownership rights in the Software,
+          including any updates, enhancements, modification, revisions or
+          additions thereto. KorTerra is under no obligation to End-User to
+          provide End-User access or use of the Software and nothing herein
+          grants End-User any right, including right of expectation, for use of
+          such Software. KorTerra shall be under no obligation to provide
+          updates, enhancements, modifications, revisions or additions to the
+          Software. If the Software is made available for use to End-User,
+          KorTerra may provide the dedicated servers needed for End-User's use
+          of the Software. Rights not specifically granted in this Agreement are
+          expressly reserved by KorTerra. Nothing in this Agreement shall be
+          construed to confer any rights to third party beneficiaries. End-User
+          will never receive a copy of the Software. KorTerra will never release
+          the software code for the Software to End-User. The license granted
+          herein is entirely contingent upon KorTerra hosting the Software and
+          never releasing any copies of the Software, which means that End-User
+          will never host the Software itself and may never install the Software
+          on any if its computers. In no event does the license or this
+          Agreement entitle End-User to any rights of ownership in any of the
+          work flow design, process flow design, or the code in the underlying
+          page, program, database, software, or any other code used to draw or
+          render the elements on the web page, all of which is owned by
+          KorTerra. 2. Grant of License. KorTerra grants End-User, and by
+          End-User's use of the Software, End-User accepts, pursuant and subject
+          to the terms and conditions of this Agreement, a limited,
+          nonexclusive, non-transferrable, non-assignable, revocable right to
+          use the Software ("License"), solely and strictly in accordance with
+          the terms, conditions and restrictions applicable to the License, as
+          described herein. 3. Term. KorTerra may, in its sole discretion,
+          without prior notification and without limiting its remedies or
+          incurring any liability to End-User, either temporarily disable or
+          permanently discontinue the furnishing of the Software to End-User in
+          whole or in part. 4. End-User Responsibility. End-User shall not use
+          or permit its end users to use the Software in any way that violates
+          laws, infringes the rights of others, or interferes with KorTerra, and
+          any entities from whom KorTerra obtains network or web services.
+          End-User agrees unconditionally to not cause harm to KorTerra or third
+          party equipment, software, or processes used in connection with
+          furnishing the Software. Any breach of this provision may result in
+          civil and/or criminal penalties pursuant to applicable local, state
+          and federal law. 5. KorTerra's Rights. End-User acknowledges and
+          agrees that the Software and any and all documentation (the "Licensed
+          Products") are proprietary products of KorTerra under international
+          copyright law. End-User shall take all reasonable steps to safeguard
+          the Licensed Products. KorTerra owns and retains all copyright,
+          trademark, trade secret and other proprietary rights in and to the
+          Licensed Products. Without the prior written consent of KorTerra,
+          End-User shall not modify or change the Software or reverse engineer,
+          decompile or disassemble the same. 6. Indemnity. End-User shall
+          indemnify and hold harmless KorTerra from and against any loss, cost,
+          claim, liability, damage, or expense (including reasonable attorneys'
+          fees) to third parties, relating to or arising from the use of the
+          Software by End-User or any of their personnel, whether or not
+          End-User has knowledge of or has authorized such access or use,
+          including, without limitation, claims for libel, slander, invasion of
+          privacy, infringement of copyright, patent infringement (where
+          End-User has used, connected, or combined the Software with the
+          products or services of others), negligence, or tortious behavior.
+          End-User agrees to indemnify KorTerra and any entities from whom
+          KorTerra obtains network services, third party software, information
+          or data and to hold KorTerra and any such entities from whom KorTerra
+          obtains network services, third party software, information or data
+          harmless from any claims resulting from the use of the Software by
+          End-User or End-User's end users that causes damage to KorTerra and
+          any entities from whom KorTerra obtains network services, third party
+          software, information or data or that violates the law. As a condition
+          of End-User�s use of the Software End-User agrees to defend and
+          indemnify KorTerra and its licensees from and against any damages,
+          costs, liabilities, settlement amounts and/or expenses (including,
+          without limitation, attorneys' fees and other dispute resolution
+          expenses) incurred in connection with any claim, lawsuit or action by
+          any third party that arises or results from End-User or End-User�s use
+          or misuse of the Software. 7. Disclaimers. THE SOFTWARE IS LICENSED
+          "AS IS". KORTERRA DISCLAIMS ANY AND ALL WARRANTIES, WHETHER, EXPRESSED
+          OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OF
+          MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, OR AS TO THE
+          QUALITY, UTILITY OR PERFORMANCE OF THE SOFTWARE, ALL OF WHICH ARE
+          HEREBY EXPRESSLY EXCLUDED. KORTERRA MAKES NO WARRANTY THAT (i) THE
+          SOFTWARE WILL MEET END-USER'S REQUIREMENTS, (ii) THE SOFTWARE WILL BE
+          UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, (iii) THE RESULTS THAT
+          MAY BE OBTAINED FROM THE USE OF THE SOFTWARE WILL BE ACCURATE OR
+          RELIABLE, AND (iv) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION,
+          OR OTHER MATERIAL PURCHASED OR OBTAINED BY END-USER THROUGH THE
+          SOFTWARE WILL MEET END-USER'S EXPECTATIONS. THE END-USER ASSUMES
+          RESPONSIBILITY FOR SELECTING THE SOFTWARE TO ACHIEVE ITS INTENDED
+          RESULTS. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED
+          BY END-USER FROM KORTERRA SHALL CREATE ANY WARRANTY NOT EXPRESSLY
+          STATED IN THIS AGREEMENT. KorTerra has no control over third party
+          software, information or data and all third party software,
+          information or data is provided to End-User on an "as-is" basis, with
+          no warranties of any kind. KorTerra, disclaims all warranties and
+          conditions, either express, implied, or statutory, including, but not
+          limited to, any (if any) non-infringement, or that the operation of
+          any third party software, information and data will be uninterrupted,
+          error-free or virus-free, except to the extent that these disclaimers
+          are held to be legally invalid. 8. Limitation of Liability. In no
+          event shall KorTerra be liable for any damages whatsoever, including,
+          but not limited to special, exemplary, punitive, indirect, incidental
+          or consequential damages, expenses, charges or claims, including but
+          not limited to loss of profits, loss of business or business
+          opportunity, loss of use, and etc., arising out of the use or
+          inability to use the Software, or for any claim by any entity not a
+          party to this Agreement. KorTerra shall have no liability with respect
+          to any obligations or liabilities arising from the terms and
+          conditions of this Agreement for special, exemplary, punitive,
+          indirect, incidental or consequential damages, expenses, charges or
+          claims, even if it has been advised of the possibility of such
+          damages, expenses, charges or claims. KorTerra shall have no liability
+          with respect to any third party software and KorTerra does not
+          guarantee the accuracy of any of the information contained therein,
+          including, but not limited to, database information, geographic
+          information systems information, geo-spatial information and document
+          images. KorTerra shall have no liability for any damages incurred,
+          whether directly, indirectly, incidental, punitive or consequential,
+          as a result of any errors, omissions or discrepancies in any
+          information provided through third party software, including, but not
+          limited to mapping software. The End-User agrees that the liability of
+          KorTerra for actual proven damages, expenses, charges or claims for
+          any cause whatsoever, including but not limited to liability arising
+          out of contract, tort, including, but not limited to negligence and
+          strict liability, or for breach of warranty or otherwise, shall be the
+          "Liability Limitation Amount" as defined herein. The Liability
+          Limitation Amount shall be the lesser of (i) the actually proven
+          damages, expenses, charges or claims; or (ii) the amount the End-User
+          paid to KorTerra for the Software license. 9. General Provisions. 9.1
+          Arbitration. Any controversy or claim arising out of this Agreement or
+          the use of the Software shall be settled by Arbitration. No
+          arbitration or other action under this Agreement, may be brought by
+          either party against the other party, more than one (1) year after the
+          cause of action arises. Any unresolved disputes concerning this
+          Agreement shall be submitted to arbitration before a single arbitrator
+          in Minneapolis, Minnesota and the arbitration shall be conducted under
+          the rules then prevailing of the American Arbitration Association. The
+          arbitrator may award attorney's fees and expenses as part of his
+          award. The award of the arbitrator shall be binding and may be entered
+          as a judgment in any court of competent jurisdiction. 9.2 Force
+          Majeure. KorTerra's performance under this agreement shall be excused
+          for any reason, including, but not limited to: labor difficulties,
+          governmental orders, civil commotions, acts of god, or other
+          conditions or circumstances beyond KorTerra's reasonable control.
+          KorTerra shall not be liable for interruptions caused by failure of
+          equipment or services, failure of communications, power outages, or
+          other interruptions not within the complete control of KorTerra.
+          KorTerra shall not be liable for performance deficiencies caused or
+          created by End-User's equipment. KorTerra shall not be liable if
+          changes in operation, procedures, or services require modification or
+          alteration of End-User's, or End-User's users' equipment, render the
+          same obsolete or otherwise affect its performance. 9.3 Successors and
+          Assigns. This Agreement shall be binding upon and inure to the benefit
+          of the parties hereto and their assigns, legal representatives, heirs
+          or successors provided that End-User shall not assign any right or
+          obligation hereunder in whole or in part, without the prior written
+          consent of the KorTerra hereto, and any attempt to do so shall be
+          void. 9.4 Severable Provisions. Each provision of this Agreement is
+          intended to be severable. If any provision hereof is illegal or
+          invalid for any reason whatsoever, such illegality or invalidity shall
+          not affect the validity of the remainder of this Agreement. 9.5
+          Governing Law. This Agreement shall be construed and enforced in
+          accordance with the laws of the State of Minnesota. Indicate
+          acceptance of these terms and conditions by clicking on the 'I Agree'
+          button. If you do not agree, click on the 'I Disagree' button and you
+          will be returned to the main page.
+        </p>
+        <div className="close-button">
+          <button onClick={this.props.handleConfirmationModal}>Close</button>
+        </div>
+      </div>
+    );
+  }
+}

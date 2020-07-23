@@ -3,4 +3,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  Font-Family: 'Open Sans', Sans-Serif;
+  Font-Size: 15px;
 }

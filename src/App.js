@@ -16,6 +16,7 @@ export default class App extends Component {
   //   if (!token) {
   //     return
   //   }
+  // todo if the expration is greater then remove token from local storage
   //   this.setState({isAuth: true})
   // }
 
@@ -35,8 +36,9 @@ export default class App extends Component {
         return res.json();
       })
       .then((data) => {
-        console.log(data)
+        // console.log(data)
         if (data.token) {
+          // todo set expiration date in local storage as well
           window.localStorage.setItem('token',data.token)
           this.setState({
             isAuth: true,
@@ -66,7 +68,7 @@ export default class App extends Component {
         return res.json();
       })
       .then((data) => {
-        console.log(data)
+        // console.log(data)
         this.setState({
           geomData: data.rows
         })

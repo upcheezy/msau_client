@@ -2,8 +2,19 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100%;
+    width: 83%;
     /* z-index: -20; */
     right: 0;
     height: 100%;
 }
+
+a.mapboxgl-ctrl-logo {
+    margin: 0 0 -4px 16px !important;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+    border: none !important;
+    margin: 0 0 0 9px !important;
+}
+
+
