@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Map from "../map/map";
 import InfoPanel from "../infoPanel/info_panel";
 import Modal from "../modal/modal";
-import ConfirmationModal from "../confirmation_modal/confirmation_modal"
+import ConfirmationModal from "../confirmation_modal/confirmation_modal";
+import "./main.css";
 
 export default class main extends Component {
   state = {
@@ -92,8 +93,8 @@ export default class main extends Component {
     this.setState({ noCodeGeom: id });
   };
 
-  zoomToGeomNumberClick = (id) => {
-    console.log(id);
+  wktConverter = (id) => {
+    let string;
     if (id.type === "Polygon") {
       let coordArr = [];
       id.coordinates[0].forEach((element) => {
@@ -101,11 +102,9 @@ export default class main extends Component {
       });
       let geomType = id.type;
       let geomCoords = coordArr.toString();
-      let polyStr = `${geomType} ((${geomCoords}))`;
-      this.setState({ zoomGeom: polyStr });
+      string = `${geomType} ((${geomCoords}))`;
     } else if (id.type === "Point") {
-      const str = `${id.type}(${id.coordinates[0]} ${id.coordinates[1]})`;
-      this.setState({ zoomGeom: str });
+      string = `${id.type}(${id.coordinates[0]} ${id.coordinates[1]})`;
     } else if (id.type === "LineString") {
       let coordArr = [];
       id.coordinates.forEach((element) => {
@@ -113,10 +112,15 @@ export default class main extends Component {
       });
       let geomType = id.type;
       let geomCoords = coordArr.toString();
-      let lineStr = `${geomType} (${geomCoords})`;
-      console.log(lineStr);
-      this.setState({ zoomGeom: lineStr });
+      string = `${geomType} (${geomCoords})`;
     }
+    return string;
+  };
+
+  zoomToGeomNumberClick = (id) => {
+    // console.log(id);
+    let lineStr = this.wktConverter(id);
+    this.setState({ zoomGeom: lineStr });
   };
 
   selectedDrawItemHandler = (item) => {
@@ -149,6 +153,8 @@ export default class main extends Component {
           zoomToGeomNumberClick={this.zoomToGeomNumberClick}
           hasZoomedNumberClick={this.hasZoomedNumberClick}
           handleConfirmationModal={this.handleConfirmationModal}
+          wktConverter={this.wktConverter}
+          handleSpinner={this.props.handleSpinner}
         />
         <Map
           codes={this.props.codes}

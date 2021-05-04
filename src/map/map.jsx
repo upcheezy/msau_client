@@ -22,12 +22,12 @@ export default class map extends Component {
     // console.log('inside did update')
     this.updateCodeGeom();
     if (this.props.zoomGeom) {
-      console.log("inside did update");
+      // console.log("inside did update");
       // todo: zoom to this.props.zoomGeom using parse here
       if (this.props.numberClickZoom === false) {
         this.props.hasZoomedNumberClickTrue()
         let parseGeom = Parse(this.props.zoomGeom);
-        console.log(parseGeom);
+        // console.log(parseGeom);
         let parseBounds = turf.bbox(parseGeom);
         window.map.fitBounds(parseBounds, { padding: 20 });
       }
@@ -35,7 +35,7 @@ export default class map extends Component {
   }
 
   static getDerivedStateFromProps = (props, state) => {
-    console.log(props);
+    // console.log(props);
     // if (props.noCodeGeom) {
     //   console.log(this)
     // }
@@ -44,7 +44,7 @@ export default class map extends Component {
         codeGeom: Parse(props.selectedData.geom),
       };
     }
-    console.log(props);
+    // console.log(props);
   };
 
   updateCodeGeom = () => {
@@ -54,10 +54,10 @@ export default class map extends Component {
       //   codeGeom: Parse(this.props.selectedData.geom),
       // });
       if (window.map.getLayer("membergeom")) {
-        console.log(this.props);
+        // console.log(this.props);
         window.map.getSource("membergeom").setData(this.state.codeGeom);
       } else {
-        console.log("inside else");
+        // console.log("inside else");
         window.map.addSource("membergeom", {
           type: "geojson",
           data: this.state.codeGeom,
@@ -76,7 +76,7 @@ export default class map extends Component {
       }
 
       // this.setState({hasZoomed: this.props.hasZoomed})
-      console.log(this.props);
+      // console.log(this.props);
       if (this.props.hasZoomedProp === false) {
         // this.setState({hasZoomed: true})
         this.props.hasZoomedTrue();
@@ -87,7 +87,7 @@ export default class map extends Component {
   };
 
   buildMap = (id) => {
-    console.log(id);
+    // console.log(id);
     mapboxgl.accessToken = config.REACT_APP_MAPBOX_API_TOKEN;
     window.map = new mapboxgl.Map({
       container: "map",

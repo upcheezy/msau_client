@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import img from "../images/SC811.png";
+import img from "../images/SC811.png";
 import "./Login.css";
 
 class Login extends Component {
@@ -24,7 +24,9 @@ class Login extends Component {
       <div className="login-page">
         <div className="form-container">
           <form className="login-form" onSubmit={this.handleSubmit}>
-            {/* <img src={img} alt="SC811 logo" className="logo" /> */}
+            <img src={img} alt="SC811 logo" className="logo" />
+            <h2>MSAU Application</h2>
+            <p>(Member Service Area Updater)</p>
             <div className="login_error" role="alert">
               {error && <p>{error.message}</p>}
             </div>

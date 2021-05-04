@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import "./modal.css";
+import { FaWindowClose } from 'react-icons/fa'
 
 export default class modal extends Component {
   clickHandler = (operator) => {
-    console.log(this.props);
+    // console.log(this.props);
     let item = this.props.currentDrawItem;
     item.operation = operator;
     this.props.grabDrawData(item);
   };
 
   cancelHandler = () => {
-    console.log(this.props);
+    // console.log(this.props);
     this.props.removeDrawnDataAfterModalCancel();
     this.props.toggleModal();
   };
@@ -18,10 +19,11 @@ export default class modal extends Component {
   render() {
     return (
       <div className="modal-cont">
-        <p onClick={() => this.cancelHandler()} className="modal-cancel">
-          X
-        </p>
+        {/* <p onClick={() => this.cancelHandler()} className="modal-cancel">
+          
+        </p> */}
         <div className="modal-content">
+        <FaWindowClose className='x-button' onClick={() => this.cancelHandler()}/>
           <p>Is this an addition or subtraction?</p>
           <div className="button-container">
             <button

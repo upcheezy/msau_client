@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Main from './main/main'
 import Login from './login/Login'
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
+import "./App.css";
 
 export default class App extends Component {
 
@@ -9,19 +10,30 @@ export default class App extends Component {
     isAuth: false,
     // once in state pass as prop to main
     codes: [],
+    spinner: false,
+    background: false,
   }
 
-  // componentDidMount() {
-  //   let token = window.localStorage.getItem('token')
-  //   if (!token) {
-  //     return
-  //   }
-  // todo if the expration is greater then remove token from local storage
-  //   this.setState({isAuth: true})
-  // }
+  componentDidMount() {
+    let token = window.localStorage.getItem('token')
+    if (!token) {
+      return
+    }
+    let edate = window.localStorage.edate
+    if (new Date(edate) <= new Date()) {
+      window.localStorage.removeItem('token')
+      window.localStorage.removeItem('codes')
+      window.localStorage.removeItem('edate')
+    } else {
+      let codes = window.localStorage.getItem('codes')
+      codes = [{codes:codes.split(' ')}]
+      this.setState({isAuth: true, codes: codes})
+      this.getGeom({token})
+    }
+  }
 
   Login = (loginData) => {
-    fetch("http://localhost:8000/login", {
+    fetch("https://msauserver.sc811.com//login", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -39,7 +51,13 @@ export default class App extends Component {
         // console.log(data)
         if (data.token) {
           // todo set expiration date in local storage as well
-          window.localStorage.setItem('token',data.token)
+          let today = new Date()
+          let hours = today.getHours() + 1
+          let expNumber = today.setHours(hours)
+          let expirationDate = new Date(expNumber)
+          window.localStorage.setItem('edate', expirationDate)
+          window.localStorage.setItem('token', data.token)
+          window.localStorage.setItem('codes',data.codes.rows[0].codes.join(' '))
           this.setState({
             isAuth: true,
             // insert codes into state
@@ -53,7 +71,8 @@ export default class App extends Component {
   }
 
   getGeom = (loginData) => {
-    fetch("http://localhost:8000/code", {
+    this.handleSpinner();
+    fetch("https://msauserver.sc811.com//code", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -73,12 +92,22 @@ export default class App extends Component {
           geomData: data.rows
         })
         // console.log(data)
+        this.handleSpinner();
       })
       .catch((error) => this.setState({ error }));
   }
 
+  handleSpinner = () => {
+    // console.log("spinning");
+    this.setState({spinner: !this.state.spinner})
+  };
+
+  handleBackground = () => {
+    this.setState({background: !this.state.background})
+  }
+
   Signup = (SignupData) => {
-    fetch("http://localhost:8000/signup", {
+    fetch("https://msauserver.sc811.com//signup", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -100,7 +129,7 @@ export default class App extends Component {
 
   render() {
     // protected routes
-    console.log(this.state.isAuth)
+    // console.log(this.state.isAuth)
     let routes = (
       <Switch>
         <Route path='/' render={() => (<Login onLogin={this.Login}/>)}>
@@ -111,12 +140,17 @@ export default class App extends Component {
       routes = (
         <Switch>
           {/* change component to render like above and pass the state codes to main */}
-          <Route path='/' render={() => (<Main geomData={this.state.geomData} codes={this.state.codes}/>)} ></Route>
+          <Route path='/' render={() => (<Main geomData={this.state.geomData} codes={this.state.codes} spinner={this.state.spinner} handleSpinner={this.handleSpinner}/>)} ></Route>
         </Switch>
       ) 
     }
     return (
       <div>
+        {this.state.spinner ? (<div className='spinner-background'>
+          <div className='spinner'></div>
+        </div>
+        ) : ''
+        }
         {routes}
       </div>
     )

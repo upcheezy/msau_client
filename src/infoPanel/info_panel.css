@@ -76,33 +76,9 @@ h1 {
     margin: 10px
 }
 
-.addition {
-    background-color: green;
-    width: 30%;
-    text-align: center;
-    border-radius: 5px;
-    padding: 3px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 5px;
-    margin-top: 0;
-}
-
 hr {
     margin: 5px;
     width: 100%;
-}
-
-.subtraction {
-    background-color: red;
-    width: 30%;
-    text-align: center;
-    border-radius: 5px;
-    padding: 3px;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 5px;
-    margin-top: 0;
 }
 
 .code-text {
@@ -113,6 +89,8 @@ hr {
     padding-right: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
+    width: 30%;
+    text-align: center;
 }
 
 .code-text:hover {
@@ -146,28 +124,20 @@ hr {
     border-radius: 17px;
 }
 
-/* .submit-button-disable {
-    cursor: pointer;
-    background-color: #ddd;
-    border: none;
-    color: black;
-    padding: 10px 16px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition: 0.3s;
-    border-radius: 7px;
+.input-text-buffer {
+    width: 20% !important;
+    height: 43% !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
 }
 
-.submit-button-able {
-    cursor: pointer;
-    background-color: darkgray;
-    border: none;
-    color: black;
-    padding: 10px 16px;
-    text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition: 0.3s;
-    border-radius: 7px;
-} */
+.buffer-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.low-hr {
+    margin-top: 15px;
+}
